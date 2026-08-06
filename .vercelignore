@@ -1,0 +1,11 @@
+*.test.ts
+*.spec.ts
+.git
+.gitignore
+README.md
+README_RESEARCH.md
+GITHUB_STATS_RESEARCH.md
+QUICK_DECISION_GUIDE.md
+INDEX.md
+CODE_SNIPPETS.md
+.env.example

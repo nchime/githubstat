@@ -1,0 +1,16 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "vercel dev",
+  "env": {
+    "GITHUB_TOKEN": {
+      "description": "GitHub Personal Access Token (public_repo scope)",
+      "required": true
+    }
+  },
+  "functions": {
+    "api/**/*.ts": {
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "github-stats-extended",
+  "version": "1.0.0",
+  "description": "GitHub stats visualization as SVG images for GitHub profiles",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "test": "jest",
+    "lint": "eslint api lib",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@octokit/graphql": "^7.1.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@vercel/node": "^3.0.0",
+    "typescript": "^5.3.3",
+    "eslint": "^8.55.0",
+    "@typescript-eslint/parser": "^6.13.2",
+    "@typescript-eslint/eslint-plugin": "^6.13.2"
+  }
+}
