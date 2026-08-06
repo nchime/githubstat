@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Stats - 로컬 테스트</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      color: white;
+      margin-bottom: 60px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1em;
+      opacity: 0.9;
+    }
+
+    .test-sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 40px;
+    }
+
+    .section {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .section h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      color: #667eea;
+      border-bottom: 2px solid #667eea;
+      padding-bottom: 10px;
+    }
+
+    .test-case {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+    }
+
+    .test-case h3 {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .test-case p {
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .test-case a {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #667eea;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.9em;
+      transition: background 0.3s;
+      margin-right: 10px;
+      word-break: break-all;
+    }
+
+    .test-case a:hover {
+      background: #764ba2;
+    }
+
+    .url {
+      display: block;
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.85em;
+      margin: 10px 0;
+      word-break: break-all;
+      color: #333;
+    }
+
+    .preview {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .preview img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .status {
+      padding: 15px;
+      border-radius: 6px;
+      margin: 20px 0;
+      font-weight: 500;
+    }
+
+    .status.info {
+      background: #e7f3ff;
+      color: #0050b3;
+      border-left: 4px solid #0050b3;
+    }
+
+    .status.warning {
+      background: #fffbe6;
+      color: #b35806;
+      border-left: 4px solid #b35806;
+    }
+
+    .status.success {
+      background: #f6ffed;
+      color: #274f00;
+      border-left: 4px solid #274f00;
+    }
+
+    .code {
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 15px;
+      border-radius: 6px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      overflow-x: auto;
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      color: white;
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8em;
+      }
+
+      .test-sections {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🧪 GitHub Stats Extended</h1>
+      <p>로컬 테스트 페이지</p>
+    </header>
+
+    <div class="test-sections">
+      <!-- 기본 테스트 -->
+      <div class="section">
+        <h2>📊 기본 테스트</h2>
+
+        <div class="test-case">
+          <h3>Linux 창시자 - Linus Torvalds</h3>
+          <p>가장 기본적인 테스트입니다. SVG 이미지가 정상 렌더링되는지 확인하세요.</p>
+          <span class="url">http://localhost:3000/api/stats?username=torvalds</span>
+          <a href="http://localhost:3000/api/stats?username=torvalds" target="_blank">테스트 열기</a>
+          <div class="preview">
+            <img src="http://localhost:3000/api/stats?username=torvalds" alt="torvalds stats" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="test-case">
+          <h3>Python 창시자 - Guido van Rossum</h3>
+          <p>다른 개발자의 통계를 확인합니다.</p>
+          <span class="url">http://localhost:3000/api/stats?username=gvanrossum</span>
+          <a href="http://localhost:3000/api/stats?username=gvanrossum" target="_blank">테스트 열기</a>
+          <div class="preview">
+            <img src="http://localhost:3000/api/stats?username=gvanrossum" alt="gvanrossum stats" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+
+      <!-- 테마 테스트 -->
+      <div class="section">
+        <h2>🎨 테마 테스트</h2>
+
+        <div class="test-case">
+          <h3>Dark Theme (기본값)</h3>
+          <span class="url">?theme=dark</span>
+          <a href="http://localhost:3000/api/stats?username=torvalds&theme=dark" target="_blank">Dark</a>
+          <div class="preview">
+            <img src="http://localhost:3000/api/stats?username=torvalds&theme=dark" alt="dark theme" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="test-case">
+          <h3>Light Theme</h3>
+          <span class="url">?theme=light</span>
+          <a href="http://localhost:3000/api/stats?username=torvalds&theme=light" target="_blank">Light</a>
+          <div class="preview">
+            <img src="http://localhost:3000/api/stats?username=torvalds&theme=light" alt="light theme" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="test-case">
+          <h3>Blue Theme</h3>
+          <span class="url">?theme=blue</span>
+          <a href="http://localhost:3000/api/stats?username=torvalds&theme=blue" target="_blank">Blue</a>
+          <div class="preview">
+            <img src="http://localhost:3000/api/stats?username=torvalds&theme=blue" alt="blue theme" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="test-case">
+          <h3>Purple Theme</h3>
+          <span class="url">?theme=purple</span>
+          <a href="http://localhost:3000/api/stats?username=torvalds&theme=purple" target="_blank">Purple</a>
+          <div class="preview">
+            <img src="http://localhost:3000/api/stats?username=torvalds&theme=purple" alt="purple theme" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="test-case">
+          <h3>GitHub Theme</h3>
+          <span class="url">?theme=github</span>
+          <a href="http://localhost:3000/api/stats?username=torvalds&theme=github" target="_blank">GitHub</a>
+          <div class="preview">
+            <img src="http://localhost:3000/api/stats?username=torvalds&theme=github" alt="github theme" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+
+      <!-- 색상 커스터마이징 -->
+      <div class="section">
+        <h2>🎨 색상 커스터마이징</h2>
+
+        <div class="test-case">
+          <h3>Custom Colors 1</h3>
+          <p>배경: 다크 인디고, 텍스트: 라이트 블루</p>
+          <span class="url">?bg_color=1e1b4b&text_color=e0e7ff</span>
+          <a href="http://localhost:3000/api/stats?username=torvalds&bg_color=1e1b4b&text_color=e0e7ff" target="_blank">테스트</a>
+          <div class="preview">
+            <img src="http://localhost:3000/api/stats?username=torvalds&bg_color=1e1b4b&text_color=e0e7ff" alt="custom colors 1" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="test-case">
+          <h3>Custom Colors 2</h3>
+          <p>배경: 검정색, 텍스트: 흰색</p>
+          <span class="url">?bg_color=0d1117&text_color=ffffff</span>
+          <a href="http://localhost:3000/api/stats?username=torvalds&bg_color=0d1117&text_color=ffffff" target="_blank">테스트</a>
+          <div class="preview">
+            <img src="http://localhost:3000/api/stats?username=torvalds&bg_color=0d1117&text_color=ffffff" alt="custom colors 2" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="test-case">
+          <h3>Custom Colors 3</h3>
+          <p>배경: 딥 퍼플, 텍스트: 라이트 핑크</p>
+          <span class="url">?bg_color=4a0080&text_color=ff66cc</span>
+          <a href="http://localhost:3000/api/stats?username=torvalds&bg_color=4a0080&text_color=ff66cc" target="_blank">테스트</a>
+          <div class="preview">
+            <img src="http://localhost:3000/api/stats?username=torvalds&bg_color=4a0080&text_color=ff66cc" alt="custom colors 3" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+
+      <!-- 에러 처리 -->
+      <div class="section">
+        <h2>⚠️ 에러 처리</h2>
+
+        <div class="status info">
+          ℹ️ 아래 테스트는 에러 SVG를 표시합니다. 정상 작동입니다.
+        </div>
+
+        <div class="test-case">
+          <h3>존재하지 않는 사용자</h3>
+          <p>"User not found" 메시지를 SVG로 표시합니다.</p>
+          <span class="url">?username=invalid-user-xyz123456789</span>
+          <a href="http://localhost:3000/api/stats?username=invalid-user-xyz123456789" target="_blank">테스트</a>
+          <div class="preview">
+            <img src="http://localhost:3000/api/stats?username=invalid-user-xyz123456789" alt="user not found" onerror="this.style.display='none'">
+          </div>
+        </div>
+
+        <div class="test-case">
+          <h3>빈 사용자명</h3>
+          <p>사용자명이 없으면 에러 메시지가 표시됩니다.</p>
+          <span class="url">?username=</span>
+          <a href="http://localhost:3000/api/stats?username=" target="_blank">테스트</a>
+          <div class="preview">
+            <img src="http://localhost:3000/api/stats?username=" alt="empty username" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+
+      <!-- 캐싱 및 Rate Limit -->
+      <div class="section">
+        <h2>⚡ 성능 & 보안</h2>
+
+        <div class="test-case">
+          <h3>캐싱 테스트</h3>
+          <p>첫 요청: 느림 (MISS), 두 번째: 빠름 (HIT)</p>
+          <div class="code">
+# curl로 캐시 헤더 확인
+curl -i "http://localhost:3000/api/stats?username=torvalds" | grep X-Cache
+
+# 결과:
+# X-Cache: MISS (첫 요청)
+# X-Cache: HIT (두 번째 요청)
+          </div>
+          <a href="http://localhost:3000/api/stats?username=torvalds" target="_blank">캐시 테스트</a>
+        </div>
+
+        <div class="test-case">
+          <h3>캐시 새로고침</h3>
+          <p>refresh=1 파라미터로 캐시 무시</p>
+          <span class="url">?username=torvalds&refresh=1</span>
+          <a href="http://localhost:3000/api/stats?username=torvalds&refresh=1" target="_blank">캐시 새로고침</a>
+        </div>
+
+        <div class="test-case">
+          <h3>Rate Limiting</h3>
+          <p>빠르게 40번 요청하면 31번째부터 제한됩니다.</p>
+          <div class="code">
+for i in {1..40}; do
+  curl "http://localhost:3000/api/stats?username=torvalds"
+done
+
+# 결과: 31번째부터 "Rate limit exceeded" 메시지
+          </div>
+        </div>
+      </div>
+
+      <!-- 고급 테스트 -->
+      <div class="section">
+        <h2>🔧 고급 테스트</h2>
+
+        <div class="status warning">
+          ⚠️ 로컬 개발 서버 (npm run dev)가 실행 중이어야 합니다.
+        </div>
+
+        <div class="test-case">
+          <h3>응답 시간 측정</h3>
+          <div class="code">
+# macOS/Linux
+time curl -s "http://localhost:3000/api/stats?username=torvalds" > /dev/null
+
+# 예상 결과:
+# 첫 요청: 300-500ms
+# 캐시 히트: 50-100ms
+          </div>
+        </div>
+
+        <div class="test-case">
+          <h3>응답 헤더 확인</h3>
+          <div class="code">
+curl -i "http://localhost:3000/api/stats?username=torvalds"
+
+# 확인 항목:
+# - Content-Type: image/svg+xml
+# - X-Cache: HIT 또는 MISS
+# - Cache-Control: public, max-age=3600
+          </div>
+        </div>
+
+        <div class="test-case">
+          <h3>SVG 파일로 저장</h3>
+          <div class="code">
+curl "http://localhost:3000/api/stats?username=torvalds" \
+  -o stats.svg
+
+# 파일 확인
+open stats.svg  # macOS
+# 또는
+firefox stats.svg  # Linux
+          </div>
+        </div>
+      </div>
+
+      <!-- 트러블슈팅 -->
+      <div class="section">
+        <h2>🐛 트러블슈팅</h2>
+
+        <div class="test-case">
+          <h3>서버가 안 띄워질 때</h3>
+          <div class="code">
+# 1. 의존성 설치
+npm install
+
+# 2. .env.local 파일 확인
+cat .env.local
+
+# 3. 서버 시작
+npm run dev
+          </div>
+        </div>
+
+        <div class="test-case">
+          <h3>"GITHUB_TOKEN is not set" 에러</h3>
+          <p>.env.local 파일에 GitHub 토큰이 설정되지 않았습니다.</p>
+          <div class="code">
+# 1. GitHub에서 토큰 생성
+# https://github.com/settings/tokens/new
+
+# 2. .env.local 파일 생성
+echo "GITHUB_TOKEN=ghp_XXXX" > .env.local
+
+# 3. 서버 재시작
+npm run dev
+          </div>
+        </div>
+
+        <div class="test-case">
+          <h3>포트 3000이 이미 사용 중일 때</h3>
+          <div class="code">
+# macOS/Linux - 포트 확인 및 종료
+lsof -i :3000
+kill -9 PID
+
+# 또는 다른 포트 사용
+PORT=3001 npm run dev
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>💡 더 자세한 정보는 LOCAL_TESTING.md를 참조하세요.</p>
+      <p style="margin-top: 20px; opacity: 0.8;">© 2024 GitHub Stats Extended</p>
+    </footer>
+  </div>
+</body>
+</html>
