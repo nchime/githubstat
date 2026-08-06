@@ -4,10 +4,12 @@
   "description": "GitHub stats visualization as SVG images for GitHub profiles",
   "scripts": {
     "dev": "vercel dev",
+    "dev:local": "node local-server.js",
     "build": "vercel build",
     "test": "jest",
     "lint": "eslint api lib",
     "type-check": "tsc --noEmit"
+  },
   },
   "dependencies": {
     "@octokit/graphql": "^7.1.0",
