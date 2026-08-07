@@ -1,5 +1,23 @@
 # GitHub Stats Extended
 
+<div align="center">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="License: MIT" />
+  <img src="https://img.shields.io/github/languages/count/nchime/githubstat?style=flat-square" alt="Languages" />
+  <img src="https://img.shields.io/github/languages/top/nchime/githubstat?style=flat-square" alt="Top Language" />
+  <img src="https://img.shields.io/github/repo-size/nchime/githubstat?style=flat-square" alt="Repo Size" />
+  <img src="https://img.shields.io/github/stars/nchime/githubstat?style=flat-square" alt="Stars" />
+  <img src="https://img.shields.io/github/forks/nchime/githubstat?style=flat-square" alt="Forks" />
+  <img src="https://img.shields.io/github/watchers/nchime/githubstat?style=flat-square" alt="Watchers" />
+  <img src="https://img.shields.io/github/contributors/nchime/githubstat?style=flat-square" alt="Contributors" />
+  <img src="https://img.shields.io/github/issues/nchime/githubstat?style=flat-square" alt="Issues" />
+  <img src="https://img.shields.io/github/issues-closed/nchime/githubstat?style=flat-square" alt="Closed Issues" />
+  <img src="https://img.shields.io/github/issues-pr/nchime/githubstat?style=flat-square" alt="Pull Requests" />
+  <img src="https://img.shields.io/github/issues-pr-closed/nchime/githubstat?style=flat-square" alt="Merged PRs" />
+  <img src="https://img.shields.io/github/last-commit/nchime/githubstat?style=flat-square" alt="Last Commit" />
+  <img src="https://img.shields.io/badge/node-%3E%3D18-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node >= 18" />
+  <img src="https://img.shields.io/badge/vercel-%23000000?style=flat-square&logo=vercel&logoColor=white" alt="Deployed on Vercel" />
+</div>
+
 GitHub 프로필을 위한 커스터마이저블한 GitHub 통계 SVG 카드 생성기입니다.
 
 ## 🎯 기능
