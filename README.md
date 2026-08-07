@@ -20,7 +20,7 @@
 
 GitHub 프로필을 위한 커스터마이저블한 GitHub 통계 SVG 카드 생성기입니다.
 
-## 🎯 기능
+## 기능
 
 - **11가지 통계 항목**: Total Contributions, Current Streak, Commits, Pull Requests, Issues, PR Reviews, Repositories, Stars, Last Year, Top Languages, Top Repository
 - **5개 기본 테마**: Dark, Light, Blue, Purple, GitHub
@@ -32,7 +32,7 @@ GitHub 프로필을 위한 커스터마이저블한 GitHub 통계 SVG 카드 생
 - **캐싱**: 24시간 자동 캐싱
 - **Rate Limiting**: IP 기반 요청 제한
 
-## 📦 설치 및 배포
+## 설치 및 배포
 
 ### 사전 요구사항
 
@@ -95,7 +95,7 @@ vercel env add GITHUB_TOKEN
 
 vercel deploy
 ```
-## 🚀 사용법
+## 사용법
 
 ### 기본 사용
 
@@ -164,7 +164,7 @@ vercel deploy
 <img src="...&username=USERNAME&refresh=1" />
 ```
 
-## 📊 API 파라미터
+## API 파라미터
 
 | 파라미터 | 기본값 | 설명 |
 |---------|-------|------|
@@ -201,42 +201,42 @@ vercel deploy
 | `languages` | Top Languages |
 | `top_repo` | Top Repository |
 
-## 🔒 보안
+## 보안
 
 - **Rate Limiting**: IP당 분당 30 요청 제한
 - **입력 검증**: 사용자명 형식 검증
 - **XSS 방지**: SVG 콘텐츠 이스케이프 처리
 - **Token 보안**: GitHub PAT는 환경변수로만 관리
 
-## 📈 성능
+## 성능
 
 - **응답 시간**: < 500ms (캐시 히트 시 < 100ms)
 - **캐시 TTL**: 24시간
 - **SVG 크기**: ~2-3KB
 
-## 🛠️ 기술 스택
+## 기술 스택
 
 - **Runtime**: Node.js (Vercel Functions)
 - **언어**: TypeScript
 - **GitHub API**: GraphQL (@octokit/graphql)
 - **이미지**: SVG (직접 생성)
 
-## 📝 라이선스
+## 라이선스
 
 MIT
 
-## 🤝 기여
+## 기여
 
 이슈와 PR을 환영합니다!
 
-## 📞 지원
+## 지원
 
 문제 발생 시:
 1. GitHub Issues에 문의하세요
 2. `username` 파라미터 확인
 3. GitHub API 상태 확인 (github.com/status)
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [x] Top Languages 카드
 - [x] Top Repository 카드
